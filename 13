@@ -1,0 +1,8 @@
+# Generate a list of random numbers from normal distribution
+random_numbers <- rnorm(100, mean = 0, sd = 1)  # Generates 100 random numbers with mean 0 and standard deviation 1
+
+# Count occurrences of each value
+occurrences <- table(round(random_numbers, digits = 2))  # Round to 2 decimal places for better counting accuracy
+
+# Print occurrences of each value
+print(occurrences)
