@@ -1,0 +1,18 @@
+# Function to generate the first n Fibonacci numbers
+fibonacci <- function(n) {
+    fib <- numeric(n)  # Initialize a vector to store Fibonacci numbers
+    fib[1] <- 0  # First Fibonacci number
+    if (n > 1) {
+        fib[2] <- 1  # Second Fibonacci number
+        for (i in 3:n) {
+            fib[i] <- fib[i - 1] + fib[i - 2]  # Generate Fibonacci numbers
+        }
+    }
+    return(fib)
+}
+
+# Get the first 10 Fibonacci numbers
+first_10_fib <- fibonacci(10)
+
+# Display the first 10 Fibonacci numbers
+print(first_10_fib)
