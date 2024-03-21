@@ -1,0 +1,22 @@
+sieve_of_eratosthenes <- function(n) {
+    prime <- rep(TRUE, n)
+    prime[1] <- FALSE
+    p <- 2
+    
+    while (p^2 <= n) {
+        if (prime[p] == TRUE) {
+            for (i in p^2:p:n) {
+                prime[i] <- FALSE
+            }
+        }
+        p <- p + 1
+    }
+    
+    prime_numbers <- which(prime == TRUE)
+    return(prime_numbers)
+}
+
+# Example usage:
+n <- 50  # Change this value to get prime numbers up to a different number
+primes <- sieve_of_eratosthenes(n)
+print(primes)
