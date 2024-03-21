@@ -1,0 +1,14 @@
+find_factors <- function(n) {
+    factors <- c()
+    for (i in 1:n) {
+        if (n %% i == 0) {
+            factors <- c(factors, i)
+        }
+    }
+    return(factors)
+}
+
+# Example usage:
+number <- 36  # Change this value to find factors of a different number
+factors <- find_factors(number)
+print(paste("Factors of", number, ":", factors))
