@@ -1,0 +1,10 @@
+find_max_min <- function(vector) {
+    max_value <- max(vector)
+    min_value <- min(vector)
+    return(list(maximum = max_value, minimum = min_value))
+}
+
+# Example usage:
+vec <- c(3, 7, 1, 9, 5)  # Change this vector to find max and min of a different set of numbers
+result <- find_max_min(vec)
+print(result)
