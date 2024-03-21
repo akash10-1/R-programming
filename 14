@@ -1,0 +1,5 @@
+# Read the CSV file
+data <- read.csv("example.csv")  # Replace "example.csv" with the name of your CSV file
+
+# Display the content of the CSV file
+print(data)
